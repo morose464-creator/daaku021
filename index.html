@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Himanshu</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+     <a href="mine.jpeg">
+      <img src="mine.jpeg" alt="Profile" class="profile-pic">
+      </a>
+      <h2>Himanshu</h2>
+      <p class="role">Student</p>
+      <div class="separator"></div>
+      <ul class="contact-info">
+        <li><i class="fa fa-envelope"></i> daaku@example.com</li>
+        <li><i class="fa fa-phone"></i> +91 9068648599</li>
+        <li><i class="fa fa-calendar"></i> Sept 09, 2006</li>
+        <li><i class="fa fa-location-dot"></i> Jaipur, Rajasthan</li>
+      </ul>
+      <div class="social-links">
+        <a href="https://www.instagram.com/daaku__lift?igsh=MTJ3N3Z1dHM0OXc1OA=="><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </aside>
+
+
+    <main class="main">
+      
+      <nav class="tabs">
+        <button class="tab active" data-tab="about">About</button>
+        <button class="tab" data-tab="skills">Skills</button>
+        <button class="tab" data-tab="info">Info</button>
+        <button class="tab" data-tab="contact">Contact</button>
+      </nav>
+
+      
+      <section class="tab-content active" id="about">
+        <h3>About Me</h3>
+        <p>
+        Hello! My name is Himanshu Goswami and I’m currently pursuing my B.Tech in Computer Science. 
+        Ever since I started my journey in technology, I’ve been deeply interested in how computers work and how software can be built to solve real-life problems.
+        </p>
+        <p>
+        I have a strong foundation in programming with C and C++, and I’m actively working on improving my Data Structures & Algorithms skills to strengthen my problem-solving ability. 
+        Along with that, I’m gradually exploring different domains of computer science such as web development, competitive programming, and software design.
+        </p>
+        <p>
+        What excites me the most is the process of learning something new, applying it practically, and seeing the results.
+        I believe in consistency, discipline, and continuous growth — values that help me both in academics and in life.
+        </p>
+        <p>
+       My future goal is to become a skilled software developer and contribute to impactful projects that make a difference.
+        At the same time, I also aspire to keep learning, experimenting, and staying updated with modern technologies.
+        <p>
+       Beyond  academics, I am passionate about fitness and personal development. 
+       I enjoy working out, exploring new ideas, and challenging myself to become a better version every single day. 
+       I believe this balance of technical knowledge and personal discipline defines who I am and who I want to become.
+       </p>
+      </section>
+
+      <section class="tab-content" id="skills">
+        <h3>My Skills</h3>
+        <div class="skill">
+          <p>HTML / CSS</p>
+          <div class="progress"><div style="width:75%"></div></div>
+        </div>
+        <div class="skill">
+          <p>C / C++</p>
+          <div class="progress"><div style="width: 92%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Data Structures & Algorithms</p>
+          <div class="progress"><div style="width: 89%"></div></div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="info">
+  <h3>Info</h3>
+
+  <h4>Education</h4>
+  <ul>
+    <li><strong>School:</strong> Oakfield Public School</li>
+    <li><strong>College:</strong> Vivekanand Global University</li>
+    <li><strong>10th:</strong> 72%</li>
+    <li><strong>12th:</strong> 61%</li>
+  </ul>
+
+  <h4>Projects</h4>
+  <ul>
+    <li>E-Library Project</li>
+    <li>Mini Games</li>
+  </ul>
+
+  <h4>Hobbies & Interests</h4>
+  <ul>
+    <li>Gym</li>
+    <li>Video Editing</li>
+    <li>Content Creator</li>
+    <li>Gaming</li>
+  </ul>
+</section>
+
+      <section class="tab-content" id="contact">
+        <h3>Contact Me</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
